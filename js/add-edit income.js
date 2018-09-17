@@ -34,6 +34,7 @@ const addOrEditIncome = function(){
     const incFreq = document.querySelector('#incomeFrequency');
     const firstPay = document.querySelector('#firstPayday');
     const index = queryByID(location.hash.substring(1));
+    const re = /(0[1-9]|1[0-2])\/(0[1-9]|1[0-9]|2[0-9]|3[0-1])\/(1\d{3}|2\d{3})/g;
 
     // Add income
     if (!location.hash){
@@ -43,7 +44,7 @@ const addOrEditIncome = function(){
         }
 
         // Default date value
-        if (!firstPay.value){
+        if (!firstPay.value || !firstPay.value.match(re)){
             firstPay.value = '01/01/2018'
         }
 
@@ -62,7 +63,7 @@ const addOrEditIncome = function(){
         incomes[index].name = incName.value;
         incomes[index].value = incVal.value;
         incomes[index].frequency = incFreq.value;
-        incomes[index].firstPay = firstPay.value;
+        incomes[index].firstPay = firstPay.value.match(re) ? firstPay.value : '01/01/2018';
         displayCurrentInfo();
     }
     // Update localStorage
