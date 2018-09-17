@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/budget.css">
+    </head>
+    <body>
+        <div class='top'>
+            <a href="/index.html">Home</a>
+            &nbsp&nbsp&nbsp&nbsp
+            <a href="/Add-Edit Income.html">Add Income</a>
+        </div>
+
+        <form id='userInput' onsubmit='return false'>
+            <div id="switchIncomeWrapper">Switch to:<select id="switchIncome"></select></div>
+            <label>Name:</label>
+            <input type='text' id='incomeName'><br><br>
+
+            <label>Paycheck:</label>
+            <input type='text' id='incomeValue'><br><br>
+
+            <label>Frequency:</label> 
+            <select id='incomeFrequency'>
+                <option value='Bi-Monthly'>1st & 15th</option>
+                <option value='Every Other Week'>Every Other Week</option>
+            </select><br><br>
+
+            <label>First Payday:</label> 
+            <input type='text' id='firstPayday' placeholder='***Default is 01/01/2018'><br><br>
+
+            <div id='submitButtonDiv'>
+                <button id='submitButton'>Submit</button>
+                <button id='deleteButton'>Delete</button>
+            </div>
+        </form><br/><br/>
+
+        <h1 id='h1Paydays'>Paydays</h1> 
+        <div id='displayPaydays'></div>
+        
+        <script src="libraries/jquery.min.js"></script>
+        <script src="libraries/jquery-ui.min.js"></script>
+        <script src="libraries/uuidv4.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/add-edit income.js"></script>
+    </body>
+</html>
