@@ -24,7 +24,7 @@ deleteButton.addEventListener('click', function(e){
     if (confirm('Delete this income?')){
         incomes.splice(queryByID(location.hash.substring(1)), 1);
         saveIncome(incomes);
-        window.location = '/index.html';
+        window.location = 'index.html';
     }
 })
 
@@ -55,7 +55,7 @@ const addOrEditIncome = function(){
             id: uuidv4(), // Unique id
             firstPay: firstPay.value
         })
-        location.assign('/index.html')
+        location.assign('index.html')
     }
     // Edit income in incomes[]
     else {
