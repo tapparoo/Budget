@@ -27,9 +27,9 @@ const queryByID = function(desiredID){
 const listPaydates = function(freq, firstPayday){
 
     // Check if date matches 01/01/2018 format, if not: create default date
-    const re = /\d{2}\/\d{2}\/\d{4}/g;
+    const re = /(0[1-9]|1[0-2])\/(0[1-9]|1[1-9]|2[1-9]|3[0-1])\/(1\d{3}|2\d{3})/g;
     const firstPayDay = firstPayday.match(re);
-    const d = !firstPayDay ? new Date('01/01/2018') : new Date(firstPayday);
+    const d = !firstPayDay ? new Date('01/01/2018')  : new Date(firstPayday);
 
     // 'YEAR' is only used during comparisons in the while loops after incrementing the date. 
     //  Checks if we've entered a new year and if so, exit the loop
