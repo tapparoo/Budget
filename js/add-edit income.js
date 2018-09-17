@@ -55,7 +55,7 @@ const addOrEditIncome = function(){
             id: uuidv4(), // Unique id
             firstPay: firstPay.value
         })
-        location.assign('index.html')
+        window.location = 'index.html'
     }
     // Edit income in incomes[]
     else {
