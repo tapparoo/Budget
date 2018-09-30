@@ -5,7 +5,9 @@
         <link rel='stylesheet' href='css/jquery-ui.min.css'>
     </head>
     <body>
-        <p><a href="Add-Edit Income.html">New Income</a></p>
+        <a href="Add-Edit Income.html">New Income</a>
+        <a href="Bills.html">New Bill</a>
+        <br/><br/><br/><br/>
 
         <table id='payTable'>
             <tbody>
@@ -16,8 +18,19 @@
                 </tr>
             </tbody>
         </table>
-
+        <br/><br/>
+        <table id='billTable'>
+            <tbody>
+                <tr>
+                    <th>Bill</th>
+                    <th>Amount</th>
+                    <th>Frequency</th>
+                </tr>
+            </tbody>
+        </table>
+        <script src="libraries/jquery.min.js"></script>
+        <script src="libraries/jquery-ui.min.js"></script>
         <script src="js/functions.js"></script>
-        <script src="js/display income.js"></script>
+        <script src="js/display-summary.js"></script>
     </body>
 </html>

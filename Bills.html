@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/budget.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
     </head>
     <body>
         <div class='top'>
@@ -10,39 +9,37 @@
             <a href="Add-Edit Income.html">Add Income</a>
             <a href="Bills.html">Modify Bills</a>
         </div>
-
         <form id='userInput' onsubmit='return false'>
-            <div class="dropdownWrapper">Switch to:<select id="switchIncome"></select>                
+            <div class="dropdownWrapper">Switch to:<select id="switchBill"></select>                
                 
             </div>
-            <label>Name:</label>
-            <input type='text' id='incomeName'><br><br>
+            <label>Bill Name:</label>
+            <input type='text' id='billName'><br><br>
 
-            <label>Paycheck:</label>
-            <input type='text' id='incomeValue'><br><br>
+            <label>Amount:</label>
+            <input type='text' id='billAmount'><br><br>
 
             <label>Frequency:</label> 
-            <select id='incomeFrequency'>
+            <select id='billFrequency'>
+                <option value='Monthly'>Monthly</option>
                 <option value='Bi-Monthly'>Bi-Monthly</option>
-                <option value='Every Other Week'>Every Other Week</option>
             </select><br><br>
 
-            <label>First Payday:</label> 
-            <input type='text' id='firstPayday' placeholder='***Default is 01/01/2018'><br><br>
+            <label>First Due-Date:</label> 
+            <input type='text' id='firstDueDate' placeholder='***Default is 01/01/2018'><br><br>
 
             <div id='submitButtonDiv'>
                 <button id='submitButton'>Submit</button>
                 <button id='deleteButton'>Delete</button>                
             </div>
         </form><br/><br/>
+        <h1 id='h1Bills'>Bills</h1>
+        <div id='billsDiv'></div>
 
-        <h1 id='h1Paydays'>Paydays</h1> 
-        <div id='displayPaydays'></div>
-        
         <script src="libraries/jquery.min.js"></script>
         <script src="libraries/jquery-ui.min.js"></script>
         <script src="libraries/uuidv4.js"></script>
         <script src="js/functions.js"></script>
-        <script src="js/add-edit income.js"></script>
+        <script src="js/modify-bills.js"></script>
     </body>
 </html>

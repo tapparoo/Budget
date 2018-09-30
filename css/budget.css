@@ -1,14 +1,14 @@
 /* #payTable is the table on index.html */
-#payTable th, #payTable td{
+#payTable th, #payTable td, #billTable th, #billTable td{
     border: solid thin black;
     padding: 5px;
 }
 
-#payTable th {
+#payTable th, #billTable th {
     background-color: rgb(204, 198, 198);
 }
 
-#payTable td{
+#payTable td, #billTable td{
     background-color: rgb(247, 243, 243);
 }
 
@@ -44,19 +44,25 @@ h1 {
 
 .top {
     display: inline-flex;
-    width:75%
+    width:75%; 
+}
+.top a{
+    margin-left: 15px
 }
 
-#switchIncomeWrapper {
+.dropdownWrapper {
     background-color: rgb(204, 198, 198);
     margin: -10px;
     margin-bottom: 30px;
     padding:5px;
     text-align: center;
     border: thin black solid;
+
     
 }
-#switchIncomeWrapper select{
+.dropdownWrapper select{
     float: none;
     margin-left: 25px;
+    overflow:hidden;
+    max-width: 150px;
 }
